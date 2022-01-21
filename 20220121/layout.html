@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: lightgoldenrodyellow;
+      overflow: hidden; 
+    }
+
+    /* flex */
+    .flex-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* position */
+    .position-relative {
+      position: relative;
+    }
+    .position-absolute {
+      position: absolute;
+    }
+    /* font-size */
+    .font-size-8 {
+      font-size: .8rem;
+    }
+
+    
+    /* stlye */
+    #wrap {
+      width: 100vw;
+      height: 100vh;
+    }
+    #wrap > div {
+      width: 37vw;
+    }
+    #wrap #box {
+      width: 25vw;
+      height: 30vh;
+      border: 1px solid red;
+      border-radius: 1vw;
+    }
+    #wrap h1 {
+      background: #eee;
+      width: 27vw;
+      height: 15vh;
+      text-align: center;
+      line-height: 15vh;
+      top: 50%;
+      left: 40%;
+      transform: translateY(-50%);
+    }
+    #wrap p {
+      width: 17vw;
+      left: 59vw;
+      top: 60vh;
+      word-break: keep-all;
+    }
+
+    @media all and (min-width:320px) and (max-width:768px) {
+      #wrap #box {
+        width: 70vw;
+      }
+      .flex-center {
+        padding-left: 10vw;
+        align-items: flex-start;
+        margin-top: 15vh;
+      }
+      #wrap h1 {
+        width: 40vw;
+        font-size: 1rem;
+      }
+      #wrap p {
+        width: 50vw;
+        top: 40vh;
+        left: 30vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap" class="position-relative flex-center">
+    <div>
+      <div id="box" class="position-relative">
+        <h1 class="position-absolute">Lorem ipsum</h1>
+      </div>
+    </div>
+    <p class="position-absolute font-size-8">
+      Lorem ipsum dolor, 
+      sit amet consectetur adipisicing elit.
+      Dolor quas velit ab impedit in iste quis obcaecati, 
+      atque fugit quam voluptate? Animi praesentium corporis 
+      voluptas molestiae autem cupiditate aliquid temporibus?
+    </p>
+  </div>
+</body>
+</html>
