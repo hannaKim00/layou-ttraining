@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    ul {
+      list-style: none;
+    }
+    
+    .flex-space-betweem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .position-absolute {
+      position: absolute;
+    }
+    .border {
+      border: 1px solid #787878;
+    }
+
+    /* style */
+    header {
+      height: 10vh;
+      padding: 0 6vw;
+    }
+    header div {
+      width: 10vw;
+      height: 5vh;
+    }
+    header ul {
+      width: 20vw;
+    }
+
+    main {
+      width: 100vw;
+      height: 90vh;
+      background-color:peachpuff;
+    }
+    main #boxWrap {
+      width: inherit;
+      height: inherit;
+      justify-content: space-around;
+    }
+    main div {
+      width: 15vw;
+      height: 20vh;
+    }
+
+    section {
+      height: 100vh;
+      width: 100vw;
+      /* position */
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+    }
+    section div {
+      width: 16vw;
+      padding: 1vh .5vw 10vh .5vw;
+      border: 1px solid #333;
+      background: #fff;
+      /* position */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <header class="flex-space-betweem">
+    <div class="border"></div>
+    <nav>
+      <ul class="flex-space-betweem">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="boxWrap" class="flex-space-betweem">
+      <div class="border"></div>
+      <div class="border"></div>
+      <div class="border"></div>
+    </div>
+  </main>
+  <section class="position-absolute">
+    <div class="position-absolute">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ad dolor nostrum, non aliquid itaque magnam, minus ipsam error eaque obcaecati, illum tenetur porro sed consequatur odit hic saepe provident?</p>
+    </div>
+  </section>
+
+
+  <script>
+    const div = document.querySelector('section');
+    const box = document.querySelector('#boxWrap div');
+    console.dir(div);
+
+    box.addEventListener("click", function() {
+      div.style.display = "block";
+    })
+    div.addEventListener("click", function() {
+      div.style.display = "none";
+    })
+  </script>
+</body>
+</html>
