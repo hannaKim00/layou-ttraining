@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+
+    const container = document.querySelector("#container");
+    const divitem = document.querySelectorAll("#container div");
+
+    // body
+    document.body.style.width = "100vw";
+    document.body.style.height = "100vh";
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    
+    // container
+    console.dir(container);
+    container.style.display = "flex";
+    container.style.alignItems = "flex-end";
+
+    // divitem
+    let height = 100;
+    for(i = 0; i < divitem.length; i++) {
+      divitem[i].style.width = "20vw";
+      divitem[i].style.height = height + "vh";
+      divitem[i].style.border = "1px solid gray";
+      divitem[i].style.boxSizing = "border-box";
+      height = height - 20;
+    }
+
+    //background
+    divitem[0].style.background = "lightblue";
+    divitem[1].style.background = "lightpink";
+    divitem[2].style.background = "lightyellow";
+    
+  </script>
+</body>
+</html>
