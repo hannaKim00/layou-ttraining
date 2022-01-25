@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout-training</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    #container {
+      width:100vw;
+      height:100vh;
+      background-color: salmon;
+    }
+    #container header {
+      width:inherit;
+      height:10vh;
+      background-color: #ddd;
+      /* flex */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #container header div {
+      min-width: 5vw;
+      height: 5vh;
+      margin: 10vw;
+      background-color: salmon;
+    }
+    #container header div:nth-child(2) {
+      width: 70vw;
+    }
+    #container main {
+      width:inherit;
+      height:90vh;
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #thumnail-container {
+      border-top: 1px solid red;
+      width:inherit;
+      height:inherit;
+      /* flex */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #thumnail-container div {
+      width:10vw;
+      height:10vw;
+      background-color: #ddd;
+    }
+    /* modal ********************************************* */
+    #modal {
+      width:100vw;
+      height:100vh;
+      position:fixed;
+      top:0;
+      left:0;
+      /* flex */
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #modal div {
+      position:absolute;
+    }
+    #text-box {
+      border-radius: 10vw;
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+      padding:5vw;
+      text-align:center;
+      width:30vw;
+      height:30vw;
+      z-index:1;
+      background-color: #fff;
+      /* flex */
+      display:flex;
+      justify-content: space-around;
+      align-items: space-around;
+      flex-direction: column;
+    }
+    #modal-background {
+      position:absolute;
+      width: inherit;
+      height: inherit;
+      background-color: #222;
+      opacity: 0.5;
+      z-index:0;
+    }
+  </style>
+</head>
+<body>
+  <div id="modal">
+    <div id="text-box">
+      <h1>this is modal window</h1>
+      <p>부모자식관계 + 형제관계를 이해하고, 스타일링 방식을 이해한다면 충분히 포지셔닝이 가능하다.</p>
+      <button id="close">close</button>
+    </div>
+    <div id="modal-background"></div>
+  </div>
+  <div id="container">
+    <header>
+      <div></div>
+      <div></div>
+    </header>
+    <main>
+      <div id="thumnail-container">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+
+    const modal = document.querySelector('#modal');
+    const closeButton = document.querySelector('#close');
+
+    closeButton.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+  </script>
+
+
+</body>
+</html>
