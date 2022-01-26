@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-color: lightslategrey;
+      /* flex */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    /* position */
+    .position-relative {
+      position: relative;
+    }
+    .position-absolute {
+      position: absolute;
+    }
+
+    #wrap > div {
+      width: 20px;
+      height: 20px;
+      background-color: rgb(27, 27, 27);
+      border-radius: 50%;
+      margin: 15vh 0;
+    }
+
+    .box {
+      width: 15vw;
+      height: 10vh;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0,0,0,.2);
+      border-radius: 10px;
+      transition: .5s;
+
+      left: 3vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="position-relative">
+      <div class="box position-absolute"></div>
+    </div>
+    <div class="position-relative">
+      <div class="box position-absolute"></div>
+    </div>
+    <div class="position-relative">
+      <div class="box position-absolute"></div>
+    </div>
+    <div class="position-relative">
+      <div class="box position-absolute"></div>
+    </div>
+    <div class="position-relative">
+      <div class="box position-absolute"></div>
+    </div>
+  </div>
+
+  <script>
+    const divButton = document.querySelector('#wrap');
+    const box = document.querySelectorAll('.box');
+    console.log(divButton);
+    
+    // 초기값 설정
+    for(i = 0; i < box.length; i++) {
+      box[i].style.opacity = "0";
+    }
+
+    divButton.addEventListener('click', function(event) {
+      console.dir(event.target);
+      if(event.target.firstElementChild.style.opacity === "0") {
+        event.target.firstElementChild.style.opacity = "1";
+      } else {
+        event.target.firstElementChild.style.opacity = "0";
+      }
+    });
+
+</script>
+</body>
+</html>

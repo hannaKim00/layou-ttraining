@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>web-design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Raleway:wght@100;200;300&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+    li {
+      font-family: 'Raleway', sans-serif;
+    }
+
+    header {
+      width: 100vw;
+      height: 10vh;
+      /* background-color: #aaa; */
+      padding: 5vh;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+      /* flex */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      position: fixed;
+      opacity: 0.5;
+    }
+
+    header:hover {
+      opacity: 1;
+      transition: 0.5s;
+    }
+
+    header div {
+      width: 10vw;
+      height: 5vh;
+      /* background-color: #014040; */
+    }
+
+    header div:nth-child(1) {
+      width: 5vh;
+      height: 5vh;
+      /* background-color: #014040; */
+    }
+
+    header div:nth-child(2) {
+      width: 75vw;
+      height: 5vh;
+      /* background-color: #261919; */
+      margin-top: 5vh;
+    }
+
+    header div:nth-child(2)>ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      color: #ddd;
+
+      /* flex */
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+
+      cursor: pointer;
+    }
+
+    header div:nth-child(2)>ul>li ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      margin-top: 5vh;
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    header div:nth-child(2)>ul>li>ul>li {
+      margin: 0.2vh;
+    }
+
+    #container {
+      width: 100vw;
+      height: auto;
+    }
+
+    #container section {
+      width: inherit;
+      height: 100vh;
+    }
+
+    #container section:nth-child(1) {
+      background-color: #014040;
+    }
+
+    /* section-1 */
+    #container section:nth-child(1)>div:nth-child(1) {
+      width: inherit;
+      height: 100vh;
+      /* background-color: #ddd; */
+      overflow: hidden;
+      background-image: url(./main-coffee.jpg);
+      background-size: cover;
+
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #aaa;
+    }
+
+    #container section:nth-child(1)>div:nth-child(1) h1 {
+      font-size: 5rem;
+      margin-bottom: 3vh;
+      mix-blend-mode: hard-light;
+      font-weight: 100;
+      margin-right: 24vw;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    #container section:nth-child(1)>div:nth-child(1) hr {
+      width: 30vw;
+      margin-right: 30vw;
+      margin-bottom: 3vh;
+      opacity: 0.3;
+    }
+
+    #container section:nth-child(1)>div:nth-child(1) p {
+      width: 30vw;
+      margin-right: 30vw;
+      margin-bottom: 3vh;
+      text-align: justify;
+      font-family: 'Raleway', sans-serif;
+      line-height:1.5rem;
+    }
+
+    #container section:nth-child(1)>div:nth-child(2) {
+      /* position:absolute; */
+      width: inherit;
+      height: 30vh;
+      background-color: #027373;
+      /* flex */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    #container section:nth-child(1) div:nth-child(2) div {
+      width: 15vw;
+      height: 30vh;
+      background-color: #A6523F;
+      border-radius: 2vh;
+      /* box-shadow: 5px 5px 5px rgba(0,0,0,0.2); */
+    }
+
+    .submenu li {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div></div>
+    <div>
+      <ul>
+        <li>coffee
+          <ul class="submenu">
+            <li>sub-menu-1</li>
+            <li>sub-menu-2</li>
+            <li>sub-menu-3</li>
+            <li>sub-menu-4</li>
+            <li>sub-menu-5</li>
+            <li>sub-menu-6</li>
+            <li>sub-menu-7</li>
+            <li>sub-menu-8</li>
+            <li>sub-menu-9</li>
+            <li>sub-menu-10</li>
+          </ul>
+
+
+        </li>
+        <li>menu
+          <ul class="submenu">
+            <li>sub-menu-1</li>
+            <li>sub-menu-2</li>
+            <li>sub-menu-3</li>
+            <li>sub-menu-4</li>
+            <li>sub-menu-5</li>
+            <li>sub-menu-6</li>
+            <li>sub-menu-7</li>
+            <li>sub-menu-8</li>
+            <li>sub-menu-9</li>
+            <li>sub-menu-10</li>
+          </ul>
+        </li>
+        <li>store
+          <ul class="submenu">
+            <li>sub-menu-1</li>
+            <li>sub-menu-2</li>
+            <li>sub-menu-3</li>
+            <li>sub-menu-4</li>
+            <li>sub-menu-5</li>
+            <li>sub-menu-6</li>
+            <li>sub-menu-7</li>
+            <li>sub-menu-8</li>
+            <li>sub-menu-9</li>
+            <li>sub-menu-10</li>
+          </ul>
+        </li>
+        <li>what's NEW
+          <ul class="submenu">
+            <li>sub-menu-1</li>
+            <li>sub-menu-2</li>
+            <li>sub-menu-3</li>
+            <li>sub-menu-4</li>
+            <li>sub-menu-5</li>
+            <li>sub-menu-6</li>
+            <li>sub-menu-7</li>
+            <li>sub-menu-8</li>
+            <li>sub-menu-9</li>
+            <li>sub-menu-10</li>
+          </ul>
+        </li>
+        <li>mypage
+          <ul class="submenu">
+            <li>sub-menu-1</li>
+            <li>sub-menu-2</li>
+            <li>sub-menu-3</li>
+            <li>sub-menu-4</li>
+            <li>sub-menu-5</li>
+            <li>sub-menu-6</li>
+            <li>sub-menu-7</li>
+            <li>sub-menu-8</li>
+            <li>sub-menu-9</li>
+            <li>sub-menu-10</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+  <div id="container">
+    <section>
+      <div>
+        <h1 id="title">lorem coffee</h1>
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla modi inventore nobis laborum fugit
+          molestias nemo dicta fugiat est deserunt eum similique veniam nihil voluptates, excepturi repudiandae pariatur
+          debitis Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur neque praesentium iure nisi fugit
+          perspiciatis alias, amet adipisci? Eum, ut?</p>
+      </div>
+    </section>
+  </div>
+  
+  <script>
+    const title = document.querySelector('#title');
+    let titleValue = 0;
+    title.style.opacity = titleValue;
+    title.style.marginLeft = titleValue + "vw";
+    let timer = setInterval(function() {
+      if(titleValue < 1) {
+        titleValue = titleValue + 0.1;
+        title.style.opacity = titleValue;
+        title.style.marginLeft = -(titleValue * 10) + "vw";
+      } else {
+        clearInterval(titleValue);
+      }
+    }, 16);
+  </script>
+</body>
+</html>
