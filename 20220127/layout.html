@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      width: 100vw;
+      height: 200vh;
+      overflow-x: hidden;
+    }
+    section {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* class */
+    .flxe {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .border {
+      border: 1px solid #ccc;
+    }
+    .text-align {
+      text-align: center;
+      line-height: 10vh;
+    }
+
+    /* page style */
+    #page {
+      /* position */
+      position: fixed;
+      right: 1vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #page div {
+      width: 14px;
+      height: 14px;
+      background: #000;
+      border-radius: 50%;
+      margin: 1vh 0;
+      text-indent: -9999px;
+    }
+
+    /* section1 style */
+    #text {
+      width: 35vw;
+      /* flex */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    #text p {
+      margin-top: 5vh;
+    }
+    
+    /* section2 style */
+    #box {
+      width: 2vw;
+      height: 50vh;
+      background: #ddd;
+      margin-right: 10vw;
+    }
+    #img {
+      width: 30vw;
+    }
+    #img div {
+      height: 10vh;
+      margin-bottom: 5vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="page">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+
+  <div id="containing">
+    <section class="flxe">
+      <div id="text">
+        <h1 class="border text-align">Lorem ipsum</h1>
+        <span class="border text-align">별</span>
+        <p class="border">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio ratione, optio fugit neque harum maiores commodi amet ex facilis aperiam distinctio aspernatur numquam nesciunt ut iure tempore quam! Minima, nesciunt.</p>
+      </div>
+    </section>
+
+    <section class="flxe">
+      <div id="box"></div>
+      <div id="img">
+        <div class="border text-align">image</div>
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta omnis aliquid earum reprehenderit quidem, praesentium quia ducimus nihil fugit maxime non. Tempore sit repellat optio facilis ratione numquam nostrum rem!</p>
+      </div>
+    </section>
+  </div>
+  
+  <script>
+    const star = document.querySelector('#text span');
+    const h1 = document.querySelector('#text h1');
+    const p = document.querySelector('#text p');
+    
+    let vlaue = 10;
+    star.style.width = vlaue + "vw";
+    star.style.height = vlaue + "vh";
+    
+    h1.style.width = vlaue * 2 + "vw";
+    p.style.height = vlaue * 2 + "vh";
+    
+    const text = document.querySelector('#text');
+    const aa = text.children;
+    console.log(aa);
+    
+    text.addEventListener('click', function(event) {
+      console.dir(event.target.style.background);
+      if(event.target.style.background = "white") {
+        if(event.target.id !== "text") {
+          event.target.style.background = "skyblue";
+          event.target.style.color = "white";
+        }
+      } else {
+        event.target.style.background = "white";
+        event.target.style.color = "black";
+      }
+      });
+
+  </script>
+</body>
+</html>
