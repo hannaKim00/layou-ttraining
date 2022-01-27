@@ -60,6 +60,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
     }
+    #text > * {
+      transition: .5s;
+    }
     #text p {
       margin-top: 5vh;
     }
@@ -119,21 +122,20 @@
     h1.style.width = vlaue * 2 + "vw";
     p.style.height = vlaue * 2 + "vh";
     
-    const text = document.querySelector('#text');
-    const aa = text.children;
-    console.log(aa);
     
+    let color = "white";
     text.addEventListener('click', function(event) {
-      console.dir(event.target.style.background);
-      if(event.target.style.background = "white") {
+      if(color === "white") {
         if(event.target.id !== "text") {
-          event.target.style.background = "skyblue";
-          event.target.style.color = "white";
+          event.target.style.color = color;
+          color = "skyblue";
+          event.target.style.background = color;
         }
       } else {
-        event.target.style.background = "white";
+        color = "white";
+        event.target.style.background = color;
         event.target.style.color = "black";
-      }
+      }  
       });
 
   </script>
