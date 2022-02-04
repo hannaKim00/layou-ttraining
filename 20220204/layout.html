@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* class */
+    .position-relative {
+      position: relative;
+    }
+    .position-absolute {
+      position: absolute;
+    }
+    
+    /* style */
+    #circle {
+      width: 800px;
+      height: 800px;
+      border-radius: 50%;
+      background: rgba(255, 246, 217, .8);
+      /* position */
+      left: -300px;
+      top: -300px;
+    }
+
+    #container {
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container > div {
+      width: 33.3333%;
+      /* border: 1px solid red; */
+    }
+
+    #container #text {
+      font-size: 1.5rem;
+      text-align: right;
+      align-self: flex-end;
+      padding-right: 1.5vw;
+      padding-bottom: 25vh;
+      color: #2f4240;
+    }
+
+    #container img {
+      display: block;
+      margin: auto;
+      /* size */
+      width: 500px;
+      height: 500px;
+    }
+
+    #container #box {
+      height: 100vh;
+      /* position */
+      top: 0;
+      right: 0;
+    }
+    #container #box h1 {
+      font-size: 15em;
+      color: rgba(255, 246, 217, .8);
+      /* position */
+      top: 50%;
+      right: 3vw;
+      transform: translateY(-50%) rotate(-90deg);
+    }
+    #container #box > div {
+      width: 70%;
+      height: 100vh;
+      background: rgba(255, 255, 255, .5);
+      backdrop-filter: blur(10px);
+      padding: 15vh 2vw;
+      text-align: center;
+      color: #2f4240;
+      /* position */
+      top: 0;
+      right: 0;
+    }
+    #container #box #number {
+      margin-top: 10vh;
+    }
+    #container #box #number div {
+      margin: 5vh 0;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="circle" class="position-absolute">1</div>
+
+  <div id="container">
+    <div id="text">
+      <h2>Pooh</h2>
+      <p>You can't be happy every day. <br>
+        But there are happy things every day.</p>
+    </div>
+
+    <div>
+      <img src="../20220204/images/img.png" alt="Pooh">
+    </div>
+
+    <div id="box" class="position-relative">
+      <h1 class="position-absolute">LOREM</h1>
+      <div class="position-absolute">
+        <h2>Lorem ipsum</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae fugiat illum sit fuga laborum repellendus repellat odit! Molestiae odio itaque eaque quaerat alias quo, ipsa non. Corrupti doloribus quibusdam possimus?</p>
+
+        <div id="number">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
