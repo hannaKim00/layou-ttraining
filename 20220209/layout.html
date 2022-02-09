@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #999;
+    }
+    
+    #contents {
+      width: 100vw;
+      height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #contents p {
+      width: 15vw;
+      color: #444;
+    }
+    #contents div:nth-of-type(1) {
+      width: 1vw;
+      height: 20vh;
+      border: 1px solid #333;
+      margin: 0 2vw;
+    }
+    #contents #h1-wrap {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="contents">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nostrum vel iusto commodi atque esse? Voluptatem, dolore molestiae repellat explicabo iure optio labore praesentium quos mollitia voluptatum, incidunt illum accusantium.</p>
+    <div></div>
+    <div id="h1-wrap">
+      <h1>I AM</h1>
+      <h1>A</h1>
+      <h1>TIGER</h1>
+      <h1>WITH WINGS</h1>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector('body');
+    const h1 = document.querySelector('#contents #h1-wrap');
+
+    let bodyColor = 160;
+    let h1Color = 61;
+    h1.addEventListener('click', function() {
+      body.style.backgroundColor = "rgb(" + bodyColor + "," + bodyColor + "," + bodyColor;
+      bodyColor = bodyColor + 5;
+
+      h1.style.color = "rgb(" + h1Color + "," + h1Color + "," + h1Color;
+      h1Color = h1Color + 10;
+    });
+  </script>
+</body>
+</html>
