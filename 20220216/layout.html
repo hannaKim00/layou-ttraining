@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="scss/layout.css">
+</head>
+<body>
+  <div id="container">
+    <img src="./일러스트45.png" alt="">
+
+    <div>
+      <div id="text">
+        <h1>title</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam atque ducimus animi quisquam? Nesciunt animi ducimus, pariatur repudiandae molestiae perferendis doloribus inventore impedit earum veniam consequatur obcaecati nulla ut mollitia?</p>
+      </div>
+
+      <div id="circle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const container = document.querySelector('#container');
+    const img = document.querySelector('img');
+    const text = document.querySelector('#container > div #text');
+    const circle = document.querySelectorAll('#container > div #circle div');
+    console.log(circle);
+
+    function style(setValue, color) {
+      setValue.style.background = color;
+    }
+
+    let value = true;
+    img.addEventListener('click', function() {
+      if(value == true) {
+        style(container, "#000");
+        text.style.color = "#fff";
+        for(i = 0; i < circle.length; i++) {
+          style(circle[i], "#fff");
+        };
+        value = false;
+      } else {
+        style(container, "#fff");
+        text.style.color = "#000";
+        for(i = 0; i < circle.length; i++) {
+          style(circle[i], "#000");
+        };
+        value = true;
+      }
+    });
+  </script>
+</body>
+</html>
